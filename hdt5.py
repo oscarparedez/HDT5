@@ -46,6 +46,7 @@ def proceso(env, cpu, ram, num_inst, num_ram):
 
 #Este intervalo es el que va cambiando
 intervalo = 25
+#funcion que crea los procesos simulados
 def process_generator(env, cpu, ram):
     
     for i in range(intervalo):
