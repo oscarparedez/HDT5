@@ -6,7 +6,9 @@ from statistics import stdev
 from math import sqrt
 
 env = simpy.Environment()
+#Cambiar capacity a cpu para ir probando
 cpu = simpy.Resource(env, capacity=1)
+#cambiar init a ram para ir probando
 ram = simpy.Container(env, capacity=100, init=100)
 listaTiempo = []
 
@@ -39,10 +41,10 @@ def proceso(env, cpu, ram, num_inst, num_ram):
     tiempo_final = env.now - tiempo_inicial
     listaTiempo.append(tiempo_final)
     print("El tiempo final del proceso es: ",tiempo_final,"\n")
-    
-    
-    #   retornar el total de ram al terminar el proceso
+        
+#retornar el total de ram al terminar el proceso
 
+#Este intervalo es el que va cambiando
 intervalo = 25
 def process_generator(env, cpu, ram):
     
